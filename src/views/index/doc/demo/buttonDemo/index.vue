@@ -170,7 +170,6 @@ const demo1 = Prism.highlight(
   Prism.languages.html,
   "html"
 );
-console.log(buttonDemoRaw1)
 const demo2 = Prism.highlight(
   buttonDemoRaw2,
   Prism.languages.html,

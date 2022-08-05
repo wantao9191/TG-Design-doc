@@ -16,10 +16,11 @@ export const MNav = defineComponent({
                 active.value = labels[0].label
             }, 100);
             nextTick(() => {
-                document.querySelector('.router-main').onscroll = e => {
+                const $main = document.querySelector('.router-main') as HTMLDivElement
+                $main.onscroll = e => {
                     const navs = document.querySelectorAll('.desc-title')
                     for (let i = 0; i < navs.length; i++) {
-                        let n = navs[i]
+                        let n = navs[i] as HTMLSpanElement
                         const { top } = n.getBoundingClientRect()
                         if (top > 0 && top < 200) {
                             active.value = n.innerText
@@ -33,17 +34,19 @@ export const MNav = defineComponent({
         const onClick = (l: any, i: number) => {
             active.value = l.label
             activeTop.value = i * 22
-            document.querySelector('.router-main').scrollTo(0, document.querySelectorAll('.desc-title')[i].parentElement.parentElement.offsetTop)
+            const $main = document.querySelector('.router-main') as HTMLDivElement
+            const titles = document.querySelectorAll('.desc-title')
+            $main.scrollTo(0, titles[i].parentElement.parentElement.offsetTop)
         }
         init()
         return () => (
             <div class={t['m-nav-content']}>
                 <nav class={t['m-nav']}>
                     {labels.map((l: any, i: number) => {
-                        return <a href="javaScript:;" class={active === l.label ? t.active : ''}
+                        return <a href="javaScript:;" class={active.value === l.label ? t.active : ''}
                             onClick={() => onClick(l, i)}>{l.label}</a>
                     })}
-                    <span class="border-pos" style={{ top: activeTop + 'px' }}></span>
+                    <span class={t["border-pos"]} style={{ top: activeTop.value + 'px' }}></span>
                 </nav >
             </div >
         )
