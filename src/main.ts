@@ -1,5 +1,15 @@
 import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import tgdesign from "@wantao/tgdesign";
+import './index.scss'
+import './assets/css/normal.scss'
+// import './libs/tg-ui.scss'
+import { App } from './App.tsx'
+import router from './router'
+import store from './store'
+import "prismjs";
+import "prismjs/themes/prism-solarizedlight.css";
 
-createApp(App).mount('#app')
+// import "@wantao/tgdesign/dist/style.css";
+const app = createApp(App)
+app.use(router).use(store).use(tgdesign)
+app.mount('#app')

@@ -1,0 +1,12 @@
+#app-view {
+    height: 100%;
+    background: #f5f7f9;
+  
+    >main {
+      height: calc(100% - 50px);
+  
+      .router-view {
+        min-height: 100%;
+      }
+    }
+  }

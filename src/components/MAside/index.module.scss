@@ -1,0 +1,91 @@
+.m-aside {
+  background: #fff;
+  width: 240px;
+  height: calc(100% - 2px);
+  margin-top: 2px;
+  overflow-y: auto;
+  padding-right: 10px;
+
+  &::-webkit-scrollbar {
+    /*高宽分别对应横竖滚动条的尺寸*/
+    width: 5px;
+    height: 20px;
+  }
+
+  /*滚动条里面小方块*/
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px !important;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2) !important;
+    /* 颜色 */
+    /* background:#b6b6b6!important; */
+    /* 线性渐变背景 */
+    background: #d2d6dd;
+  }
+
+  ul {
+    li {
+      user-select: none;
+      color: #666;
+      margin-top: 4px;
+      font-size: 13px;
+      cursor: pointer;
+
+      .label-bold {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      &.active {
+        // background: #333;
+        border-right: 3px solid $primary;
+        background: #f0faff;
+        font-weight: bold;
+        color: $primary;
+      }
+
+      >.label {
+        display: block;
+        padding: 12px;
+
+        &:hover {
+          color: $primary;
+        }
+      }
+
+      .label-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .menu-child {
+        .type {
+          font-size: 12px;
+          color: #999;
+        }
+      }
+
+      &.type {
+        cursor: default;
+
+        &:hover {
+          >span {
+            color: #999;
+          }
+        }
+      }
+
+      &.default {
+        cursor: default;
+
+        >.label {
+          &:hover {
+            >span {
+              color: #666;
+            }
+          }
+        }
+      }
+    }
+  }
+}

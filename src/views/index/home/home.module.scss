@@ -1,0 +1,108 @@
+.home-page {
+    min-height: 100%;
+    background: url(../../../assets/images/bg.png) center center no-repeat;
+    background-size: cover;
+
+    >.banner {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 80%;
+        max-width: 1080px;
+        text-align: center;
+        padding-top: 160px;
+
+        h3 {
+            color: #666;
+        }
+
+        >.title {
+            display: inline-block;
+            font-size: 120px;
+            vertical-align: middle;
+            font-family: emoji;
+            margin-left: 24px;
+        }
+
+        >img {
+            vertical-align: middle;
+            width: 240px;
+        }
+
+        .btns {
+            margin-top: 96px;
+
+            a {
+                height: 40px;
+                line-height: 40px;
+                width: 120px;
+                display: inline-block;
+                background: $primary;
+                color: #fff;
+                border-radius: 4px;
+                margin: 0 8px;
+
+                &.default {
+                    background: #fff;
+                    color: #333;
+                    border: 1px solid #ddd;
+                }
+
+                span {
+                    vertical-align: top;
+                }
+            }
+        }
+
+        .intros {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 100px;
+
+            .intro-item {
+                flex: 1;
+
+                >h3 {
+                    color: $primary;
+                }
+
+                >p {
+                    font-size: 13px;
+                    margin-top: 12px;
+                }
+            }
+
+        }
+    }
+
+    @media screen and (max-width:680px) {
+        >.banner {
+            position: static;
+            padding: 40px 0;
+            transform: translate(0, 0);
+            width: 90vw;
+            margin: 0 auto;
+
+            >.title {
+                font-size: 48px;
+                margin-bottom: 24px;
+            }
+
+            >img {
+                width: 160px;
+            }
+
+            .intros {
+                display: block;
+                margin: 48px auto 0;
+                width: 210px;
+
+                .intro-item {
+                    margin-bottom: 24px;
+                }
+            }
+        }
+
+    }
+}
