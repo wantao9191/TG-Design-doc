@@ -1,6 +1,6 @@
 <template>
   <main class="doc-main">
-    <m-aside :class="{ 'mobile-aside': menuVisible }"></m-aside>
+    <m-aside class="m-aside" :class="{ 'mobile-aside': menuVisible }"></m-aside>
     <main class="router-main">
       <router-view
         class="router-view"
