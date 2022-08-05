@@ -173,7 +173,6 @@ const demo4 = Prism.highlight(
 );
 const inputData = reactive({
     value: "",
-    code: 'import { messageBox，message } from "tg-ui";,<script setup>,2&messageBox.alert("这是一段内容"，"提示").then(()=>{,4&,6&message.success("确认了弹窗") ,2&}),<script>',
     visible: false,
 });
 const toggleDemoCode = () => {

@@ -2,7 +2,7 @@
     <tg-button size="mini" theme="link" @click="openMessageBox">点击打开message box</tg-button>
 </template>
 <script setup lang="ts">
-import { messageBox, message } from "@/libs";
+import { messageBox, message } from "@wantao/tgdesign";
 const openMessageBox = () => {
     messageBox.alert('这是一段内容', '提示', {
         beforeClose: (action, instance, done) => {

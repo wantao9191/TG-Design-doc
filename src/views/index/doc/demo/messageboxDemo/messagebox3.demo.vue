@@ -2,7 +2,7 @@
     <tg-button size="mini" theme="link" @click="openpromptBox">点击打开prompt box</tg-button>
 </template>
 <script setup lang="ts">
-import { messageBox, message } from "@/libs";
+import { messageBox, message } from "@wantao/tgdesign";
 const openpromptBox = () => {
     messageBox.prompt('请输入邮箱', '提示',
         {

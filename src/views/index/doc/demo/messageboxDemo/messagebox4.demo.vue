@@ -2,7 +2,7 @@
     <tg-button size="mini" theme="link" @click="openMessageBoxCenter">点击打开message box</tg-button>
 </template>
 <script setup lang="ts">
-import { messageBox, message } from "@/libs";
+import { messageBox, message } from "@wantao/tgdesign";
 const openMessageBoxCenter = () => {
     messageBox.alert('这是一段内容', '提示', {
         align: 'center'

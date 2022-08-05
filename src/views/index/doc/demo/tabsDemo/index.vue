@@ -145,7 +145,7 @@
                 一个异步操作的标签页
             </div>
         </div>
-        <div class="demo-code" v-show="inputData3.visible">
+        <div class="demo-code" v-show="inputData4.visible">
             <code class="code-bg">
           <div class="code-text">
             通过 <code> before-leave</code> 控制标签的切换
@@ -161,7 +161,7 @@
         </a>
         <a href="javaScript:;">
             <tg-tooltip content="查看代码" placement="bottom">
-                <tg-icon icon="tg-code" size="21" @click="toggleDemoCode3"></tg-icon>
+                <tg-icon icon="tg-code" size="21" @click="toggleDemoCode4"></tg-icon>
             </tg-tooltip>
         </a>
     </div>
@@ -229,6 +229,12 @@ const inputData3 = reactive({
 });
 const toggleDemoCode3 = () => {
     inputData3.visible = !inputData3.visible;
+};
+const inputData4 = reactive({
+    visible: false,
+});
+const toggleDemoCode4 = () => {
+    inputData4.visible = !inputData4.visible;
 };
 </script>
 <style lang="scss" scoped>

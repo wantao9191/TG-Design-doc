@@ -2,7 +2,7 @@
     <tg-button size="mini" theme="link" @click="openConfirmBox">点击打开confirm box</tg-button>
 </template>
 <script setup lang="ts">
-import { messageBox, message } from "@/libs";
+import { messageBox, message } from "@wantao/tgdesign";
 const openConfirmBox = () => {
     messageBox.confirm('这是一段内容', '提示').then(() => {
         message.success({message:'确认了弹窗',type:'success'})
