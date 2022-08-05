@@ -2,6 +2,7 @@ import { defineComponent } from 'vue'
 import { useRouter } from "vue-router";
 import { useStore } from "vuex";
 import t from "./index.module.scss";
+import logo from "@/assets/images/logo.svg";
 export const MHeader = defineComponent({
     setup(props, context) {
         const router = useRouter()
@@ -15,7 +16,7 @@ export const MHeader = defineComponent({
         return () => (
             <div class={[t["m-header"], 'shadow']}>
                 <div class={t.logo} onClick={onClick}>
-                    <img src="../../../assets/images/logo.svg" alt="" />
+                    <img src={logo} />
                     <span>TG Design</span>
                 </div>
                 <div class={t.nav}>

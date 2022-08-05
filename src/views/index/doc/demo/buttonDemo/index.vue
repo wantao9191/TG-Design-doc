@@ -105,7 +105,7 @@
       <span class="desc-title">禁用按钮</span>
       <div class="desc-text">按钮的禁用状态</div>
     </div>
-    <div class="demo-code" v-show="buttonData3.visible">
+    <div class="demo-code" v-show="buttonData5.visible">
       <code class="code-bg">
           <div class="code-text">
             通过
@@ -120,7 +120,7 @@
   </div>
   <div class="demo-btns">
     <a href="javaScript:;">copy</a>
-    <a href="javaScript:;" @click="toggleDemoCode3">{{ buttonData3.txt }}</a>
+    <a href="javaScript:;" @click="toggleDemoCode5">{{ buttonData5.txt }}</a>
   </div>
   </div>
   <!-- 按钮Loading -->
@@ -170,6 +170,7 @@ const demo1 = Prism.highlight(
   Prism.languages.html,
   "html"
 );
+console.log(buttonDemoRaw1)
 const demo2 = Prism.highlight(
   buttonDemoRaw2,
   Prism.languages.html,
@@ -209,6 +210,11 @@ const buttonData4 = reactive({ visible: false, txt: "显示" });
 const toggleDemoCode4 = () => {
   buttonData4.visible = !buttonData4.visible;
   buttonData4.txt = buttonData4.visible ? "隐藏" : "显示";
+};
+const buttonData5 = reactive({ visible: false, txt: "显示" });
+const toggleDemoCode5 = () => {
+  buttonData5.visible = !buttonData5.visible;
+  buttonData5.txt = buttonData5.visible ? "隐藏" : "显示";
 };
 </script>
 <style lang="scss" scoped>

@@ -1,6 +1,7 @@
 import { defineComponent } from 'vue'
 import { useRouter } from "vue-router";
 import t from "./home.module.scss";
+import logo from "@/assets/images/logo.svg";
 export const homeIndex = defineComponent({
     setup(props, context) {
         const router = useRouter()
@@ -10,7 +11,7 @@ export const homeIndex = defineComponent({
         return () => (
             <div class={t['home-page']}>
                 <div class={t.banner}>
-                    <img src="../../../assets/images/logo.svg" alt="" />
+                    <img src={logo} />
                     <span class={t.title}>TG Design</span>
                     <h3>基于 Vue.js 3 的个人级 UI 组件库和前端解决方案，
                         为无数开发者服务</h3>
