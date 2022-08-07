@@ -81,7 +81,7 @@
       <div class="demo-code" v-show="demo1Visible3">
         <code class="code-bg">
           <div class="code-text">
-            通过 <code>center</code> 为 <code>true</code> 可以居中布局
+            通过 <code>center</code> 为 <code>true</code> 可以居中布局。
           </div>
         </code>
         <pre class="language-html" v-html="demo3"></pre>
