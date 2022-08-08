@@ -66,7 +66,7 @@ export const MAside = defineComponent({
         };
         return () => (
             <div class={t['m-aside']}>
-                <ul>
+                <ul class={t['m-aside-list']}>
                     {menus.map((m: any, i) => {
                         return <li onClick={() => menuClick(m)} class={[path === m.path ? t.active : '',m.path?'':t.default]}>
                             <div class={[t.label, t['label-flex']]} style="padding: 12px 12px 0">
